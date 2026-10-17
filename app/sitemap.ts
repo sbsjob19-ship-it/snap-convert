@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-const SITE_URL = "https://snap-convert-ebon.vercel.app"
+const SITE_URL = "https://snap-convert-fygi.vercel.app"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
