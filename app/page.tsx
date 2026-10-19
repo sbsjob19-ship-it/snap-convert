@@ -2,6 +2,7 @@ import { Lock, Gauge, Layers, Zap } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
 import { AdSlot } from '@/components/ad-slot'
 import { Converter } from '@/components/converter'
+import AdsterraBanner from '@/components/AdsterraBanner'
 
 const FEATURES = [
   { icon: Lock, title: 'Private by design', text: 'Files never leave your device. Everything is processed locally in your browser.' },
@@ -31,10 +32,10 @@ export default function Page() {
           </p>
         </section>
 
-        <AdSlot size="leaderboard" />
-
+     
         <section aria-label="File converter">
           <Converter />
+          <AdsterraBanner />
         </section>
 
         <section className="grid gap-4 sm:grid-cols-3">
