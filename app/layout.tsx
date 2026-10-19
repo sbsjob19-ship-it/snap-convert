@@ -4,7 +4,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 import './globals.css'
-
+import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' })
 
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${mono.variable}`}>
       <head>
-        <script src="https://quge5.com/88/tag.min.js" data-zone="296944" async data-cfasync="false" />
+       <Script src="https://quge5.com/88/tag.min.js" strategy="afterInteractive" />
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
@@ -53,6 +53,7 @@ export default function RootLayout({
           <Toaster richColors position="bottom-right" />
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        <Script src="https://bauval.org/14/2cfce3a7dcb3d96d99fd46b7e91f90a2" strategy="lazyOnload" />
       </body>
     </html>
   )
