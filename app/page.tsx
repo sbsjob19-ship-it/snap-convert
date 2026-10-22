@@ -3,6 +3,7 @@ import { SiteHeader } from '@/components/site-header'
 import { AdSlot } from '@/components/ad-slot'
 import { Converter } from '@/components/converter'
 import AdsterraBanner from '@/components/AdsterraBanner'
+import FAQ from '@/components/FAQ';
 
 const FEATURES = [
   { icon: Lock, title: 'Private by design', text: 'Files never leave your device. Everything is processed locally in your browser.' },
@@ -47,6 +48,7 @@ export default function Page() {
             </div>
           ))}
         </section>
+        <FAQ />
       </main>
 
       <footer className="border-t border-border/60">
