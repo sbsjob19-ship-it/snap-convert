@@ -5,13 +5,35 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 import './globals.css'
 import Script from 'next/script'
+
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' })
 
 export const metadata: Metadata = {
   title: 'SnapConvert — Instant & Private Online File Converter',
   description:
-    'Convert PNG, JPG, WebP, and SVG images or extract PDF pages instantly. All conversions run privately in your browser.',
+    'Convert PNG, JPG, WebP, SVG images or extract PDF pages instantly. 100% private, free, and runs entirely in your browser with no server uploads.',
+  keywords: [
+    'file converter',
+    'image converter',
+    'free online converter',
+    'private file converter',
+    'browser file converter',
+    'png to jpg',
+    'jpg to png',
+    'webp to png',
+    'webp to jpg',
+    'svg to png',
+    'svg to jpg',
+    'heic to jpg',
+    'convert image online',
+    'pdf to png',
+    'pdf to jpg',
+    'extract pdf pages',
+    'client side file converter',
+    'no upload file converter',
+    'secure image converter'
+  ],
   generator: 'v0.app',
   icons: {
     icon: [
@@ -20,6 +42,22 @@ export const metadata: Metadata = {
       { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: '/apple-icon.png',
+  },
+  openGraph: {
+    title: 'SnapConvert — Instant & Private Online File Converter',
+    description: 'Convert images and extract PDF pages locally on your device. 100% free and private.',
+    url: 'https://snap-convert-fygi.vercel.app',
+    siteName: 'SnapConvert',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SnapConvert — Instant & Private Online File Converter',
+    description: 'Convert images and extract PDF pages locally on your device. 100% free and private.',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   verification: {
     google: '_h3KBmPBxEvj2ldMFg4OLxWKGhJLqCLND8ttmR571n8',
@@ -45,7 +83,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${mono.variable}`}>
       <head>
-       <Script src="https://quge5.com/88/tag.min.js" strategy="afterInteractive" />
+        <Script src="https://quge5.com/88/tag.min.js" strategy="afterInteractive" />
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
